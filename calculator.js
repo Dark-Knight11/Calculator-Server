@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-const port = 3000;
+const port = 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
@@ -14,7 +14,7 @@ app.post("/", (req, res) => {
     var num2 = Number(req.body.num2);
     var result = num1 + num2;
     console.log(num1, num2, result);
-    res.send("The result is " + result);
+    res.send("The calculated result is " + result);
 });
 
 app.get("/bmicalculator", (req, res) => {
@@ -30,5 +30,5 @@ app.post("/bmicalculator", (req, res) => {
 
 
 app.listen(port, () => {
-    console.log("Server Started on port 3000");
+    console.log("Server started runnuing on port 5000");
 });
